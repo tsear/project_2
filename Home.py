@@ -14,10 +14,24 @@ with header:
 	# seperation line
 	st.markdown("""---""") 
 
-
-with demo:
-	st.multiselect(label = 'Select tickers', options = 
-		['adbe', "sq", "pltr", "aapl", "amzn", "msft", "tsla", "googl", "ipi", "bg", "tsn", "cf", "ntr"])
-
 # sidebar
 st.sidebar.markdown("# Home")
+
+
+
+  
+with demo:
+	st.multiselect(label = 'Select tickers', options = ['adbe', 'sq', 'twtr', 'aapl', 'amzn', 'msft', 'tsla', 'googl', 'ipi', 'bg', 'tsn', 'cf', 'ntr'])
+
+with demo:
+  st.write('* each position will have a balance of $100,000 by default')
+
+with demo:
+  st.selectbox(label = 'Select Strategy', options = ['SMA', 'Bolinger Bands', 'Keltner Channel'])
+
+
+st.button(label = 'Run Portfolio!')
+
+#tickers= {}
+#for ticker in ticker_select:
+#    tickers[ticker] = pd.DataFrame()
