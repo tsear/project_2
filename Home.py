@@ -1,5 +1,5 @@
 import streamlit as st
-
+from PIL import Image
 
 # creates empty containers
 header = st.container()
@@ -9,15 +9,15 @@ resources = st.container()
 
 # title of main page
 with header:
-	st.title('Project 2: t-SNE stock data')
-
-# sidebar
-st.sidebar.markdown("# Home")
+	st.title('Project 2: Algorthimic Volatility Trading Bot')
+	st.write('This application uses an assortment of volatility technical strategies to trade in & out of positions.')
+	# seperation line
+	st.markdown("""---""") 
 
 
 with demo:
-	st.write('This a project Demo')
+	st.multiselect(label = 'Select tickers', options = 
+		['adbe', "sq", "pltr", "aapl", "amzn", "msft", "tsla", "googl", "ipi", "bg", "tsn", "cf", "ntr"])
 
-
-with explaination:
-	st.write('This project aims to take exponential stock returns & tranform that data with PCA & t-SNE')
+# sidebar
+st.sidebar.markdown("# Home")
